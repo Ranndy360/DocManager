@@ -1,8 +1,11 @@
+<%@ page import="com.sv.utec.docmanager.controller.LoginController" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+    <%@ page import="com.sv.utec.docmanager.controller.LoginController" %>
+    <% LoginController loginController = new LoginController(); %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Doc Manager</title>
@@ -71,33 +74,7 @@
 <script src="<c:url value='/assets/plugins/bootstrap/js/bootstrap.bundle.js'/>"></script>
 <!-- AdminLTE App -->
 <script src="<c:url value='/assets/plugins/dist/js/adminlte.js'/>"></script>
-<script>
-    $(document).on('submit', '#loginForm', function(event) {
-        event.preventDefault();
-        // var form = $("#formCodigo");
-        $.ajax({
-            // headers: {
-            //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            // },
-            url: "<c:url value='/sesion/login'/>",
-            type: 'POST',
-            // data: form.serialize(),
-            dataType: 'json',
-            success: function (data) {
 
-            },
-            error: function (xhr, status) {
-
-            },
-            complete: function (xhr, status) {
-                // setTimeout(function(){
-                //     $("#formCodigo button").attr("disabled", false);
-                //     button.removeClass("disabled");
-                // }, 1000);
-            }
-        });
-    });
-</script>
 
 </body>
 </html>
