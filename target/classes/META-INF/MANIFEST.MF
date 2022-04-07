@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Built-By: i82671
+Build-Jdk: 1.8.0_181
+Created-By: Apache Maven 4.0.0
+Archiver-Version: Plexus Archiver

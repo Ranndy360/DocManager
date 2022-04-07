@@ -1,2 +1,3 @@
-com\sv\utec\docmanager\controller\Login.class
+com\sv\utec\docmanager\controller\LoginController.class
 com\sv\utec\docmanager\pojo\Conexion.class
+com\sv\utec\docmanager\model\Usuarios.class
