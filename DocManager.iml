@@ -46,5 +46,12 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.database.jdbc:ojdbc10:19.3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.database.jdbc:ucp:19.3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.database.security:oraclepki:19.3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.database.security:osdt_cert:19.3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.database.security:osdt_core:19.3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.database.ha:simplefan:19.3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.database.ha:ons:19.3.0.0" level="project" />
   </component>
 </module>
