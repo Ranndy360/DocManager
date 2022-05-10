@@ -1,5 +1,6 @@
 <jsp:include page="/layout/header.jsp" />
 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -30,7 +31,6 @@
                             <tr>
                                 <th>Codigo</th>
                                 <th>Fecha registro</th>
-                                <th>Fecha actualizacion</th>
                                 <th>Estado</th>
                                 <th>Area</th>
                                 <th>Nombre</th>
@@ -39,16 +39,18 @@
                             </tr>
                             </thead>
                             <tbody>
+
+                            <c:forEach var="solicitud" items="${listado}">
                             <tr>
-                                <td>ASD2434</td>
-                                <td>10/10/2021</td>
-                                <td>10/10/2021</td>
-                                <td>Activo</td>
-                                <td>Recursos</td>
-                                <td>Randy Letona</td>
-                                <td>545456454</td>
-                                <td>Solicitud para construccion y mejoras a la propiedad</td>
+                                <td>${solicitud.codigo}</td>
+                                <td>${solicitud.fecha_ingreso}</td>
+                                <td>${solicitud.estado}</td>
+                                <td>${solicitud.area.nombre}</td>
+                                <td>${solicitud.solicitante.nombre}</td>
+                                <td>${solicitud.solicitante.numero_identificacion}</td>
+                                <td>${solicitud.descripcion}</td>
                             </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>

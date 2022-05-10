@@ -10,8 +10,11 @@ public class Conexion {
     private PreparedStatement preparedStatement;
 
     public Conexion() throws Exception {
-        Class.forName("com.mysql.jdbc.Driver").newInstance();
-        conn = DriverManager.getConnection("jdbc:mysql://34.70.27.52:3306/appimc","root","9Mkiu7ndODhw1lOK");
+        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        String username = System.getenv("JDBC_DATABASE_USERNAME");
+        String password = System.getenv("JDBC_DATABASE_PASSWORD");
+        conn = DriverManager.getConnection(dbUrl,username,password);
     }
 
     /**
@@ -29,11 +32,6 @@ public class Conexion {
         }
         ResultSet rs = preparedStatement.executeQuery();
         return rs;
-//        while (rs.next()) {
-//            msg += "nID: " + rs.getInt("EmployeeID") + " Name: "
-//                    + rs.getString("Firstname");
-//        }
-//        tv.setText(msg);
     }
 
     /**
@@ -51,10 +49,15 @@ public class Conexion {
             preparedStatement.setNString(contador,valores.toString() );
             contador++;
         }
+
         if(preparedStatement.executeUpdate()>0)
             return true;
         else
             return false;
+    }
+
+    public void close() throws SQLException {
+        conn.close();
     }
 
 

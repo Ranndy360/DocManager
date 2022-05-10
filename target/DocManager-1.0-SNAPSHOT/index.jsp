@@ -1,11 +1,9 @@
-<%@ page import="com.sv.utec.docmanager.controller.LoginController" %>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <%@ page import="com.sv.utec.docmanager.controller.LoginController" %>
-    <% LoginController loginController = new LoginController(); %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Doc Manager</title>
@@ -28,9 +26,9 @@
         <div class="card-body">
             <p class="login-box-msg">Inicia sesion </p>
 
-            <form action="#" method="post" id="loginForm">
+            <form action="login?action=login" method="post" id="loginForm">
                 <div class="input-group mb-3">
-                    <input type="email" class="form-control" placeholder="Correo">
+                    <input type="email" name="correo" class="form-control" placeholder="Correo">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -38,7 +36,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" placeholder="Contraseña">
+                    <input type="password" name="clave" class="form-control" placeholder="Contraseña">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
@@ -58,9 +56,6 @@
 
             <!-- /.social-auth-links -->
 
-            <p class="mb-1">
-                <a href="forgot-password.html">Olvide contraseña</a>
-            </p>
         </div>
         <!-- /.card-body -->
     </div>

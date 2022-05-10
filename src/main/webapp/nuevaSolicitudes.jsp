@@ -1,5 +1,6 @@
 <jsp:include page="/layout/header.jsp" />
 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -26,37 +27,27 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form>
+                        <form action="solicitudes?action=crear" method="post">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Area</label>
-                                    <select class="form-control">
-                                        <option></option>
+                                    <label >Area</label>
+                                    <select class="form-control" name="area">
+                                        <c:forEach var="area" items="${areaDs}">
+                                        <option value="${area.id}">${area.nombre}</option>
+                                        </c:forEach>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Nombre solicitante</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nombre completo">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Fecha Nacimiento</label>
-                                    <input type="date" class="form-control" id="exampleInputPassword1" >
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Numero identificacion</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Numero unico de identidad">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Genero</label>
-                                    <select class="form-control">
-                                        <option>Masculino</option>
-                                        <option>Femenino</option>
-                                        <option>Otros</option>
+                                    <label >Solicitante</label>
+                                    <select class="form-control" name="solicitante">
+                                        <c:forEach var="solicitante" items="${solicitanteDs}">
+                                            <option value="${solicitante.id}">${solicitante.nombre}</option>
+                                        </c:forEach>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Descripcion</label>
-                                    <textarea class="form-control" id="exampleInputPassword1" placeholder="Numero unico de identidad"></textarea>
+                                    <label >Descripcion</label>
+                                    <textarea class="form-control" name="descripcion" placeholder="Numero unico de identidad"></textarea>
                                 </div>
                             </div>
                             <!-- /.card-body -->

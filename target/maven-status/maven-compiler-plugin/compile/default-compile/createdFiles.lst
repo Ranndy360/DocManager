@@ -1,3 +1,14 @@
-com\sv\utec\docmanager\controller\LoginController.class
-com\sv\utec\docmanager\pojo\Conexion.class
+com\sv\utec\docmanager\controller\LoginServlet.class
 com\sv\utec\docmanager\model\Usuarios.class
+com\sv\utec\docmanager\Toolkit.class
+com\sv\utec\docmanager\dao\SolicitudesDAO.class
+com\sv\utec\docmanager\dao\UsuarioDAO.class
+com\sv\utec\docmanager\model\Solicitud.class
+com\sv\utec\docmanager\dao\SolicitanteDAO.class
+com\sv\utec\docmanager\model\Solicitante.class
+com\sv\utec\docmanager\model\Empleados.class
+com\sv\utec\docmanager\pojo\Conexion.class
+com\sv\utec\docmanager\controller\SolicitudesServlet.class
+com\sv\utec\docmanager\model\Area.class
+com\sv\utec\docmanager\controller\HomeServlet.class
+com\sv\utec\docmanager\controller\SolicitanteServlet.class

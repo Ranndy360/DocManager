@@ -22,6 +22,10 @@
           <element id="library" level="project" name="Maven: com.oracle.database.security:osdt_core:19.3.0.0" />
           <element id="library" level="project" name="Maven: com.oracle.database.ha:simplefan:19.3.0.0" />
           <element id="library" level="project" name="Maven: com.oracle.database.ha:ons:19.3.0.0" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.29" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.19.4" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.17.2" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.17.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

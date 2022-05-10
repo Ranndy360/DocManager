@@ -1,5 +1,6 @@
 <jsp:include page="/layout/header.jsp" />
 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -8,7 +9,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Perfil</h1>
+                    <h1>Crear Solicitud</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -22,40 +23,32 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Mi informacion</h3>
+                            <h3 class="card-title">Ingrese el solicitante</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form>
+                        <form action="solicitante?action=crear" method="post">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Correo</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" >
+                                    <label >Nombre solicitante</label>
+                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre completo">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Estado</label>
-                                    <select class="form-control">
-                                        <option>Activo</option>
-                                        <option>Desactivado</option>
-                                        <option>Bloqueado</option>
+                                    <label >Fecha Nacimiento</label>
+                                    <input type="date" class="form-control" name="fechaNacimiento" >
+                                </div>
+                                <div class="form-group">
+                                    <label >Numero identificacion</label>
+                                    <input type="text" class="form-control" name="identificacion" placeholder="Numero unico de identidad">
+                                </div>
+                                <div class="form-group">
+                                    <label for="genero">Genero</label>
+                                    <select class="form-control" name="genero" id="genero">
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Otros">Otros</option>
                                     </select>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Nombre</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" >
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Apellido</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" >
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Carnet</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" >
-                                </div>
-
                             </div>
                             <!-- /.card-body -->
 

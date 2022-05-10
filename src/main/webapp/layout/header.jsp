@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | General Form Elements</title>
+    <title>DocManeger</title>
 
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <!-- Google Font: Source Sans Pro -->
@@ -58,8 +58,8 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#">
-                    <i class="far fa-regular fa-arrow-right-from-bracket"></i>
+                <a class="nav-link" data-toggle="dropdown" href="<c:url value='login'/>">
+                    <i class="far fa-sign-out"></i>
                 </a>
             </li>
         </ul>
@@ -69,7 +69,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="../../index3.html" class="brand-link">
+        <a href="<c:url value='dashboard'/>" class="brand-link">
             <span class="brand-text font-weight-light">Doc Manager</span>
         </a>
 
@@ -91,7 +91,15 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <a href="<c:url value='listadoSolicitudes.jsp'/>" class="nav-link">
+                        <a href="<c:url value='solicitante?action=nuevo'/>" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Nuevo Solicitante
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<c:url value='solicitudes?action=listado'/>" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Listado Solicitudes
@@ -99,7 +107,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<c:url value='nuevaSolicitudes.jsp'/>" class="nav-link">
+                        <a href="<c:url value='solicitudes?action=nuevo'/>" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Nueva Solicitud
