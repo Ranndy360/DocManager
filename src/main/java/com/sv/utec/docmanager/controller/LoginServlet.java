@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet {
             }
         } catch (Exception e) {
             e.getStackTrace();
+            System.out.println(e);
         }
         RequestDispatcher dispatcher= request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);

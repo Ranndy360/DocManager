@@ -9,9 +9,12 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="<c:url value='/plugins/fontawesome-free/css/all.min.css'/>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
 
+
+    <link rel="icon" href="<c:url value='/assets/img/icon.png'/>" type="image/png">
     <!-- Theme style -->
     <link rel="stylesheet" href="<c:url value='/assets/plugins/dist/css/adminlte.css'/>">
 

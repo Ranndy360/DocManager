@@ -11,10 +11,11 @@ public class Conexion {
 
     public Conexion() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-        String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        String username = System.getenv("JDBC_DATABASE_USERNAME");
-        String password = System.getenv("JDBC_DATABASE_PASSWORD");
-        conn = DriverManager.getConnection(dbUrl,username,password);
+//        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+//        String username = System.getenv("JDBC_DATABASE_USERNAME");
+//        String password = System.getenv("JDBC_DATABASE_PASSWORD");
+//        conn = DriverManager.getConnection(dbUrl,username,password);
+        
     }
 
     /**

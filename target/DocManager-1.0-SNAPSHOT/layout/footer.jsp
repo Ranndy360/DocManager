@@ -19,21 +19,30 @@
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 
 
-<!-- Bootstrap 4 -->
-<script src="<c:url value='/assets/plugins/bootstrap/js/bootstrap.bundle.min.js'/>"></script>
-<!-- bs-custom-file-input -->
-<script src="<c:url value='/plugins/bs-custom-file-input/bs-custom-file-input.min.js'/>"></script>
-<!-- AdminLTE App -->
-<script src="<c:url value='/dist/js/adminlte.min.js'/>"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<c:url value='/dist/js/demo.js'/>"></script>
+
+
+
+
 <!-- Page specific script -->
 <script>
     $(function () {
-        bsCustomFileInput.init();
-        $('.datatable').DataTable();
+        // bsCustomFileInput.init();
+        $('.datatable').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ]
+        });
     });
 </script>
 </body>

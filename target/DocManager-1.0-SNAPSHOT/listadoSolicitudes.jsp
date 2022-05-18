@@ -17,7 +17,35 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-            <div class="row">
+
+            <table id="example" class="datatable table table-striped table-bordered" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Fecha registro</th>
+                    <th>Estado</th>
+                    <th>Area</th>
+                    <th>Nombre</th>
+                    <th>Nun. Identificacion</th>
+                    <th>Descripcion</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <c:forEach var="solicitud" items="${listado}">
+                    <tr>
+                        <td>${solicitud.codigo}</td>
+                        <td>${solicitud.fecha_ingreso}</td>
+                        <td>${solicitud.estado}</td>
+                        <td>${solicitud.area.nombre}</td>
+                        <td>${solicitud.solicitante.nombre}</td>
+                        <td>${solicitud.solicitante.numero_identificacion}</td>
+                        <td>${solicitud.descripcion}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+            <div class="row" style="margin-left: 0;margin-right: 0;">
                 <!-- left column -->
                 <div class="col-md-12">
                     <!-- general form elements -->
