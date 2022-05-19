@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="<c:url value='/assets/plugins/icheck-bootstrap/icheck-bootstrap.css'/>">
     <!-- Theme style -->
     <link rel="stylesheet" href="<c:url value='/assets/plugins/dist/css/adminlte.css'/>">
+    <link rel="icon" href="<c:url value='/assets/img/icon.png'/>" type="image/png">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
