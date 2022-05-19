@@ -2,22 +2,16 @@ package com.sv.utec.docmanager.controller;
 
 import com.sv.utec.docmanager.Toolkit;
 import com.sv.utec.docmanager.dao.SolicitanteDAO;
-import com.sv.utec.docmanager.model.Area;
 import com.sv.utec.docmanager.model.Solicitante;
-import com.sv.utec.docmanager.model.Solicitud;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.List;
-import java.util.logging.Logger;
 
 @WebServlet(name = "SolicitanteServlet", value = "/solicitante")
 public class SolicitanteServlet extends HttpServlet {
     SolicitanteDAO solicitanteDAO;
-   Logger logger;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,7 +29,6 @@ public class SolicitanteServlet extends HttpServlet {
             }
         } catch (Exception e) {
             e.getStackTrace();
-            logger.info(e.getMessage());
         }
         RequestDispatcher dispatcher= request.getRequestDispatcher("nuevoSolicitante.jsp");
         dispatcher.forward(request, response);
