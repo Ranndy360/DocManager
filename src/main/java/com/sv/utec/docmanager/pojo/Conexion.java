@@ -15,7 +15,8 @@ public class Conexion {
 //        String username = System.getenv("JDBC_DATABASE_USERNAME");
 //        String password = System.getenv("JDBC_DATABASE_PASSWORD");
 //        conn = DriverManager.getConnection(dbUrl,username,password);
-        
+
+        conn = DriverManager.getConnection("jdbc:mysql://34.71.1.163:3306/docmanageruser","root","3wi3HBw0DKw8AlPO");
     }
 
     /**
