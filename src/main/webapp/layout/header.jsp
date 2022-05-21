@@ -84,7 +84,7 @@
                     <img src="<c:url value='/assets/img/perfil.webp'/>" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Randy Letona</a>
+                    <a href="#" class="d-block">Estudiante</a>
                 </div>
             </div>
 
